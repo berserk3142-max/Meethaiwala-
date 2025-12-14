@@ -223,6 +223,45 @@ The backend can be deployed to Railway, Render, or similar platforms.
 
 Built with ❤️ for the love of Indian sweets
 
+## 🤖 My AI Usage
+
+This section documents how AI tools were used during the development of this project.
+
+### Tools Used
+- **GitHub Copilot** - Code autocompletion in VS Code
+- **Gemini** - For specific technical challenges
+
+### How AI Was Used
+
+| Task | AI Tool | How It Helped |
+|------|---------|---------------|
+| 3D Geometry Math | Gemini | Asked for help with the spiral geometry calculations for the Jalebi 3D model (`CatmullRomCurve3` spiral points formula) |
+| GSAP Animation Timing | Copilot | Autocomplete suggestions for scroll-triggered animation configurations |
+| Prisma Schema Design | Gemini | Brainstormed the database relationships between User, Sweet, and Transaction models |
+| Jest Test Structure | Copilot | Generated boilerplate test structure for API endpoint testing |
+| TypeScript Type Errors | Gemini | Debugged JWT type issues with `SignOptions` interface |
+
+### What I Built Without AI
+- **UI/UX Design** - The visual design, color palette, and layout decisions
+- **Project Architecture** - Folder structure and separation of concerns
+- **Business Logic** - Cart management, authentication flow, inventory tracking
+- **Component Structure** - React component hierarchy and state management
+- **API Design** - RESTful endpoint structure and response formats
+
+### Reflection
+
+AI tools were helpful for **specific technical challenges** rather than general development:
+
+1. **Accelerated Learning Curve** - Three.js geometry and GSAP scroll triggers have steep learning curves. AI helped me understand the mathematical concepts faster without replacing the need to understand them.
+
+2. **Reduced Boilerplate Time** - Writing test file structures and repetitive code patterns was faster with Copilot suggestions, letting me focus on the actual test logic.
+
+3. **Debugging Assistance** - TypeScript errors, especially with third-party library types, were resolved faster by asking AI to explain the type mismatches.
+
+4. **Limitations Noticed** - AI suggestions for visual design and user experience were generic and not culturally appropriate for an Indian sweets theme. The warm color palette and Indian aesthetic was entirely manual work.
+
+**Overall Impact**: AI served as a technical reference and productivity booster for ~15-20% of the development work, primarily in areas requiring specialized library knowledge. The core application logic, design decisions, and creative elements were developed independently.
+
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
