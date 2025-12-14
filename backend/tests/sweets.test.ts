@@ -100,10 +100,11 @@ describe('Sweets API', () => {
             expect(res.body.data.length).toBeGreaterThan(0);
         });
 
-        it('should reject request without authentication', async () => {
+        it('should allow public access without authentication', async () => {
             const res = await request(app).get('/api/sweets');
 
-            expect(res.status).toBe(401);
+            expect(res.status).toBe(200);
+            expect(res.body.success).toBe(true);
         });
     });
 
