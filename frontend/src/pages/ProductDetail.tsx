@@ -56,10 +56,13 @@ export default function ProductDetail() {
 
     const getEmoji = (category: string) => {
         switch (category) {
-            case 'Gummies': return '🍬';
-            case 'Chocolate': return '🍫';
-            case 'Sour Candies': return '🍭';
-            default: return '🍩';
+            case 'Bengali Sweets': return '🍮';
+            case 'Barfi': return '🍬';
+            case 'Crispy Sweets': return '🍩';
+            case 'Milk Sweets': return '🥛';
+            case 'Fried Sweets': return '🧁';
+            case 'Traditional': return '🪔';
+            default: return '🍬';
         }
     };
 
@@ -183,7 +186,7 @@ export default function ProductDetail() {
                             color: '#1E293B',
                             marginBottom: '1.5rem',
                         }}>
-                            ${sweet.price.toFixed(2)}
+                            ₹{sweet.price.toFixed(0)}
                         </p>
 
                         <p style={{

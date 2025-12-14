@@ -98,9 +98,9 @@ export default function Cart() {
                                         />
                                     ) : (
                                         <span style={{ fontSize: '3rem' }}>
-                                            {item.sweet.category === 'Gummies' ? '🍬' :
-                                                item.sweet.category === 'Chocolate' ? '🍫' :
-                                                    item.sweet.category === 'Sour Candies' ? '🍭' : '🍩'}
+                                            {item.sweet.category === 'Bengali Sweets' ? '🍮' :
+                                                item.sweet.category === 'Barfi' ? '🍬' :
+                                                    item.sweet.category === 'Milk Sweets' ? '🥛' : '🍬'}
                                         </span>
                                     )}
                                 </div>

@@ -45,13 +45,15 @@ export default function SweetCard({ sweet, onAddToCart }: SweetCardProps) {
         navigate(`/product/${sweet.id}`);
     };
 
-    // Generate a placeholder gradient based on category
+    // Generate a placeholder gradient based on category (Indian Sweets)
     const getCategoryColor = (category: string) => {
         const colors: Record<string, string> = {
-            'Gummies': 'linear-gradient(135deg, #FF6B6B 0%, #FFE66D 100%)',
-            'Chocolate': 'linear-gradient(135deg, #8B4513 0%, #D2691E 100%)',
-            'Sour Candies': 'linear-gradient(135deg, #00CED1 0%, #98FB98 100%)',
-            'Specialty': 'linear-gradient(135deg, #FF69B4 0%, #DDA0DD 100%)',
+            'Bengali Sweets': 'linear-gradient(135deg, #FFECD2 0%, #FCB69F 100%)',
+            'Barfi': 'linear-gradient(135deg, #FFE5E5 0%, #FFC0CB 100%)',
+            'Crispy Sweets': 'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)',
+            'Milk Sweets': 'linear-gradient(135deg, #FFF8DC 0%, #F5DEB3 100%)',
+            'Fried Sweets': 'linear-gradient(135deg, #DEB887 0%, #D2691E 100%)',
+            'Traditional': 'linear-gradient(135deg, #FFE4B5 0%, #FFDAB9 100%)',
         };
         return colors[category] || 'linear-gradient(135deg, #E91E8C 0%, #FF6B35 100%)';
     };
@@ -99,9 +101,9 @@ export default function SweetCard({ sweet, onAddToCart }: SweetCardProps) {
             >
                 {!sweet.imageUrl && (
                     <span style={{ fontSize: '4rem', filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.2))' }}>
-                        {sweet.category === 'Gummies' ? '🍬' :
-                            sweet.category === 'Chocolate' ? '🍫' :
-                                sweet.category === 'Sour Candies' ? '🍭' : '🍩'}
+                        {sweet.category === 'Bengali Sweets' ? '🍮' :
+                            sweet.category === 'Barfi' ? '🍬' :
+                                sweet.category === 'Milk Sweets' ? '🥛' : '🍬'}
                     </span>
                 )}
             </div>
@@ -116,7 +118,7 @@ export default function SweetCard({ sweet, onAddToCart }: SweetCardProps) {
                     </span>
                 </div>
 
-                <div className="product-card-price">${sweet.price.toFixed(2)}</div>
+                <div className="product-card-price">₹{sweet.price.toFixed(0)}</div>
 
                 <div className="product-card-actions">
                     {isOutOfStock ? (

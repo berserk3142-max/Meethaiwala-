@@ -7,7 +7,7 @@ import { sweetsApi } from '../services/api';
 import toast from 'react-hot-toast';
 import { Navigate } from 'react-router-dom';
 
-const CATEGORIES = ['Gummies', 'Chocolate', 'Sour Candies', 'Specialty'];
+const CATEGORIES = ['Bengali Sweets', 'Barfi', 'Crispy Sweets', 'Milk Sweets', 'Fried Sweets', 'Traditional'];
 
 export default function Admin() {
     const { isAdmin, isAuthenticated } = useAuth();
@@ -183,7 +183,7 @@ export default function Admin() {
 
                             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                                 <div className="form-group">
-                                    <label className="form-label">Price ($)</label>
+                                    <label className="form-label">Price (₹)</label>
                                     <input
                                         type="number"
                                         step="0.01"
@@ -273,7 +273,7 @@ export default function Admin() {
                                 <tr key={sweet.id} style={{ borderTop: '1px solid var(--color-gray-200)' }}>
                                     <td style={{ padding: '1rem' }}>{sweet.name}</td>
                                     <td style={{ padding: '1rem' }}>{sweet.category}</td>
-                                    <td style={{ padding: '1rem', textAlign: 'right' }}>${sweet.price.toFixed(2)}</td>
+                                    <td style={{ padding: '1rem', textAlign: 'right' }}>₹{sweet.price.toFixed(0)}</td>
                                     <td style={{
                                         padding: '1rem',
                                         textAlign: 'right',

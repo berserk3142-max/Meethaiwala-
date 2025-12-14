@@ -109,10 +109,13 @@ export default function Shop() {
 
     const getEmoji = (category: string) => {
         switch (category) {
-            case 'Gummies': return '🍬';
-            case 'Chocolate': return '🍫';
-            case 'Sour Candies': return '🍭';
-            default: return '🍩';
+            case 'Bengali Sweets': return '🍮';
+            case 'Barfi': return '🍬';
+            case 'Crispy Sweets': return '🍩';
+            case 'Milk Sweets': return '🥛';
+            case 'Fried Sweets': return '🧁';
+            case 'Traditional': return '🪔';
+            default: return '🍬';
         }
     };
 
