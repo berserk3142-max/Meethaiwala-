@@ -60,14 +60,15 @@ export default function Shop() {
         dispatch({ type: 'SET_LOADING', payload: true });
 
         const sampleSweets: Sweet[] = [
-            { id: '1', name: 'Gujiya', category: 'Traditional', price: 450, quantity: 50, description: 'Crispy fried pastry filled with sweet khoya & dry fruits', imageUrl: '/gujiya.jpg', createdAt: '', updatedAt: '' },
-            { id: '2', name: 'Premium Barfi Mix', category: 'Barfi', price: 650, quantity: 45, description: 'Assorted barfi with silver vark & pistachios', imageUrl: '/barfi-mix.jpg', createdAt: '', updatedAt: '' },
-            { id: '3', name: 'Fresh Jalebi', category: 'Traditional', price: 280, quantity: 60, description: 'Crispy golden spirals soaked in sugar syrup', imageUrl: '/jalebi.jpg', createdAt: '', updatedAt: '' },
-            { id: '4', name: 'Laddu Collection', category: 'Laddu', price: 520, quantity: 40, description: 'Assorted laddus - Besan, Motichoor, Coconut & more', imageUrl: '/laddu-collection.jpg', createdAt: '', updatedAt: '' },
-            { id: '5', name: 'Balushahi', category: 'Traditional', price: 380, quantity: 35, description: 'Flaky sweet delicacy dipped in sugar syrup', imageUrl: '/balushahi.jpg', createdAt: '', updatedAt: '' },
-            { id: '6', name: 'Kaju Katli', category: 'Premium', price: 850, quantity: 25, description: 'Diamond-shaped cashew fudge with silver foil', imageUrl: '/kaju-katli-3d.png', createdAt: '', updatedAt: '' },
-            { id: '7', name: 'Gulab Jamun', category: 'Traditional', price: 320, quantity: 55, description: 'Soft milk dumplings in rose-flavored syrup', imageUrl: '/gulab-jamun-3d.png', createdAt: '', updatedAt: '' },
-            { id: '8', name: 'Rasgulla', category: 'Bengali', price: 350, quantity: 50, description: 'Spongy cottage cheese balls in light syrup', imageUrl: '/rasgulla-3d.png', createdAt: '', updatedAt: '' },
+            { id: '1', name: 'Rasgulla', category: 'Bengali Sweets', price: 320, quantity: 50, description: 'Soft spongy cheese balls soaked in light sugar syrup - a Bengali delicacy', imageUrl: '/rasgulla.jpg', createdAt: '', updatedAt: '' },
+            { id: '2', name: 'Barfi Roll', category: 'Barfi', price: 450, quantity: 40, description: 'Premium spiral barfi rolls with rose and pista flavors - festive special', imageUrl: '/barfi-roll.jpg', createdAt: '', updatedAt: '' },
+            { id: '3', name: 'Fresh Jalebi', category: 'Crispy Sweets', price: 280, quantity: 60, description: 'Crispy golden spirals dipped in warm sugar syrup - best served hot', imageUrl: '/jalebi-fresh.jpg', createdAt: '', updatedAt: '' },
+            { id: '4', name: 'Peda', category: 'Milk Sweets', price: 380, quantity: 45, description: 'Traditional milk peda topped with pistachio - Mathura style', imageUrl: '/peda.png', createdAt: '', updatedAt: '' },
+            { id: '5', name: 'Balushahi', category: 'Fried Sweets', price: 350, quantity: 35, description: 'Flaky deep-fried pastry glazed with sugar syrup - melt in mouth', imageUrl: '/balushahi-new.jpg', createdAt: '', updatedAt: '' },
+            { id: '6', name: 'Gulab Jamun', category: 'Milk Sweets', price: 340, quantity: 55, description: 'Soft milk dumplings soaked in rose-flavored cardamom sugar syrup', imageUrl: '/gulab-jamun.jpg', createdAt: '', updatedAt: '' },
+            { id: '7', name: 'Gujiya', category: 'Traditional', price: 420, quantity: 40, description: 'Crispy fried pastry filled with sweet khoya, almonds & dry fruits - Holi special', imageUrl: '/gujiya.jpg', createdAt: '', updatedAt: '' },
+            { id: '8', name: 'Premium Barfi Mix', category: 'Barfi', price: 580, quantity: 30, description: 'Assorted barfi platter with kaju, mango, besan & coconut varieties', imageUrl: '/premium-barfi.jpg', createdAt: '', updatedAt: '' },
+            { id: '9', name: 'Imarti', category: 'Crispy Sweets', price: 300, quantity: 45, description: 'Flower-shaped crispy urad dal sweet dipped in saffron sugar syrup', imageUrl: '/imarti.jpg', createdAt: '', updatedAt: '' },
         ];
 
         try {
