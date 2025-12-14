@@ -80,15 +80,29 @@ export default function Cart() {
                                     width: '100px',
                                     height: '100px',
                                     borderRadius: '12px',
-                                    background: 'var(--color-gray-100)',
+                                    background: 'linear-gradient(145deg, #FFF8E7 0%, #FFE4B5 100%)',
                                     display: 'flex',
                                     alignItems: 'center',
                                     justifyContent: 'center',
-                                    fontSize: '3rem',
+                                    overflow: 'hidden',
                                 }}>
-                                    {item.sweet.category === 'Gummies' ? '🍬' :
-                                        item.sweet.category === 'Chocolate' ? '🍫' :
-                                            item.sweet.category === 'Sour Candies' ? '🍭' : '🍩'}
+                                    {item.sweet.imageUrl ? (
+                                        <img
+                                            src={item.sweet.imageUrl}
+                                            alt={item.sweet.name}
+                                            style={{
+                                                width: '100%',
+                                                height: '100%',
+                                                objectFit: 'cover',
+                                            }}
+                                        />
+                                    ) : (
+                                        <span style={{ fontSize: '3rem' }}>
+                                            {item.sweet.category === 'Gummies' ? '🍬' :
+                                                item.sweet.category === 'Chocolate' ? '🍫' :
+                                                    item.sweet.category === 'Sour Candies' ? '🍭' : '🍩'}
+                                        </span>
+                                    )}
                                 </div>
 
                                 {/* Details */}
@@ -100,7 +114,7 @@ export default function Cart() {
                                         {item.sweet.category}
                                     </p>
                                     <p style={{ fontWeight: 700, color: 'var(--color-primary)', marginTop: '0.5rem' }}>
-                                        ${item.sweet.price.toFixed(2)}
+                                        ₹{item.sweet.price.toFixed(0)}
                                     </p>
                                 </div>
 
@@ -161,14 +175,14 @@ export default function Cart() {
                                     <span style={{ color: 'var(--color-gray-600)' }}>
                                         {item.sweet.name} x {item.quantity}
                                     </span>
-                                    <span>${(item.sweet.price * item.quantity).toFixed(2)}</span>
+                                    <span>₹{(item.sweet.price * item.quantity).toFixed(0)}</span>
                                 </div>
                             ))}
                         </div>
 
                         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
                             <span>Subtotal</span>
-                            <span>${cartTotal.toFixed(2)}</span>
+                            <span>₹{cartTotal.toFixed(0)}</span>
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1.5rem' }}>
                             <span>Shipping</span>
@@ -185,7 +199,7 @@ export default function Cart() {
                             marginBottom: '1.5rem',
                         }}>
                             <span>Total</span>
-                            <span>${cartTotal.toFixed(2)}</span>
+                            <span>₹{cartTotal.toFixed(0)}</span>
                         </div>
 
                         <button className="btn btn-candy" style={{ width: '100%' }}>
